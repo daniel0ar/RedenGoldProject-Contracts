@@ -8,12 +8,20 @@ const hre = require("hardhat");
 
 async function main() {
 
-  const fraction = await hre.ethers.deployContract("Fraction");
+  const bond = await hre.ethers.deployContract("BondZMB");
 
-  await fraction.waitForDeployment();
+  await bond.waitForDeployment();
 
   console.log(
-    `Contract deployed to ${fraction.target}`
+    `Contract deployed to ${bond.target}`
+  );
+
+  const coin = await hre.ethers.deployContract("RGCoin");
+
+  await coin.waitForDeployment();
+
+  console.log(
+    `Contract deployed to ${coin.target}`
   );
 }
 

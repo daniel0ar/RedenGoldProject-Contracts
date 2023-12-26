@@ -10,6 +10,19 @@ module.exports = {
       chainId: 56,
       gasPrice: 20000000000,
       accounts: [`0x${process.env.PRIVATE_KEY}`]
+    },
+    sepolia: {
+      chainId: 11155111,
+      url: process.env.INFURA_SEPOLIA_ENDPOINT_URL,
+      accounts: [`0x${process.env.PRIVATE_KEY}`],
+    },
+    mumbai: {
+      chainid: 80001,
+      url: process.env.INFURA_MUMBAI_ENDPOINT_URL,
+      accounts: [`0x${process.env.PRIVATE_KEY}`]
     }
-  }
+  },
+  etherscan: {
+    apiKey: process.env.POLYGONSCAN_API_KEY
+  },
 };

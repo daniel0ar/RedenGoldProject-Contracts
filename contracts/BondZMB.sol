@@ -10,7 +10,7 @@ contract BondZMB is ERC721, ERC721URIStorage, Ownable {
 
     constructor()
         ERC721("BondZMB", "BZMB")
-        Ownable()
+        Ownable(msg.sender)
     {}
 
     function safeMint(address to, string memory uri) public onlyOwner {
@@ -18,8 +18,6 @@ contract BondZMB is ERC721, ERC721URIStorage, Ownable {
         _safeMint(to, tokenId);
         _setTokenURI(tokenId, uri);
     }
-
-    // The following functions are overrides required by Solidity.
 
     function tokenURI(uint256 tokenId)
         public
