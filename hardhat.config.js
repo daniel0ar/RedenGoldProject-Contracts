@@ -20,6 +20,11 @@ module.exports = {
       chainid: 80001,
       url: process.env.INFURA_MUMBAI_ENDPOINT_URL,
       accounts: [`0x${process.env.PRIVATE_KEY}`]
+    },
+    polygon: {
+      chainId: 137,
+      url: process.env.INFURA_POLYGON_ENDPOINT_URL,
+      accounts: [`0x${process.env.PRIVATE_KEY}`]
     }
   },
   etherscan: {
